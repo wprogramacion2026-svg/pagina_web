@@ -2,65 +2,117 @@
 body{
     background-color: black;
     color: white;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
-/* Título principal */
+/* Titulo principal */
 h1{
     text-align: center;
-    color: #FFD700; /* amarillo */
+    color: #FFD700;
+    font-size: 40px;
 }
 
-/* Subtítulos */
+/* Subtitulos */
 h2{
     text-align: center;
     color: #FFD700;
+    margin-top: 30px;
 }
 
-/* Párrafos */
+/* Parrafos */
 p{
     text-align: center;
 }
 
-/* Menú (links) */
+/* Menu */
 a{
     color: white;
     text-decoration: none;
-    margin: 10px;
+    margin: 5px;
 }
 
 a:hover{
-    color: #FFD700; /* cambia a amarillo al pasar mouse */
+    color: #FFD700;
 }
 
-/* Imágenes */
+/* Secciones (esto mejora TODO el diseño) */
+section{
+    background-color: #111;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Imagen */
 img{
     display: block;
     margin: auto;
     width: 300px;
+    border-radius: 10px;
 }
 
-/* Secciones */
-section{
-    margin: 30px;
+/* Listas */
+ul, ol{
+    width: 60%;
+    margin: auto;
 }
 
 /* Tabla */
 table{
     margin: auto;
     border-collapse: collapse;
+    width: 60%;
 }
 
-table, th, td{
+th{
+    background-color: #FFD700;
+    color: black;
+}
+
+th, td{
+    padding: 10px;
     border: 1px solid white;
-    padding: 8px;
     text-align: center;
 }
 
-/* Botón simple */
-button{
+/* Video y audio */
+video, audio{
+    display: block;
+    margin: auto;
+}
+
+/* Mapa */
+iframe{
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Formulario */
+form{
+    width: 300px;
+    margin: auto;
+}
+
+/* Inputs */
+input, textarea{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Boton */
+input[type="submit"]{
     background-color: #FFD700;
     color: black;
     border: none;
-    padding: 8px;
+}
+
+/* Footer */
+footer{
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #111;
 }
