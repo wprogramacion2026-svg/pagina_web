@@ -1,4 +1,4 @@
-/* Fondo y texto general */
+/* Fondo general */
 body{
     background-color: black;
     color: white;
@@ -8,11 +8,13 @@ body{
 /* Título principal */
 h1{
     text-align: center;
+    color: #FFD700; /* amarillo */
 }
 
 /* Subtítulos */
 h2{
     text-align: center;
+    color: #FFD700;
 }
 
 /* Párrafos */
@@ -20,9 +22,45 @@ p{
     text-align: center;
 }
 
+/* Menú (links) */
+a{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+a:hover{
+    color: #FFD700; /* cambia a amarillo al pasar mouse */
+}
+
 /* Imágenes */
 img{
     display: block;
     margin: auto;
     width: 300px;
+}
+
+/* Secciones */
+section{
+    margin: 30px;
+}
+
+/* Tabla */
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table, th, td{
+    border: 1px solid white;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Botón simple */
+button{
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    padding: 8px;
 }
