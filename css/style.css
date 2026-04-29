@@ -1,118 +1,674 @@
-/* Fondo general */
-body{
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
+/* 
+    PALETA DE COLORES DEL LOGO
+    Negro: #050505
+    Negro suave: #111111
+    Amarillo: #FFD21F
+    Azul: #4A9ADD
+    Blanco: #FFFFFF
+*/
+
+/* 
+    Aplica estilos generales a todos los elementos.
+    box-sizing evita que el padding y el borde aumenten el tamaño real.
+    scroll-behavior hace que el menu navegue suavemente.
+*/
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* Titulo principal */
+/* 
+    Estilos generales de toda la pagina.
+*/
+body{
+    margin: 0;
+    background-color: #050505;
+    color: white;
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+/* 
+    Titulo principal MASHKA.
+*/
 h1{
     text-align: center;
-    color: #FFD700;
-    font-size: 40px;
+    color: white;
+    font-size: 42px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
 }
 
-/* Subtitulos */
+/* 
+    Agrega la palabra BOX automaticamente en amarillo.
+*/
+h1::after{
+    content: " BOX";
+    color: #FFD21F;
+}
+
+/* 
+    Subtitulo TRAINING CLUB.
+*/
+body > h2:first-of-type{
+    color: white;
+    letter-spacing: 8px;
+    font-size: 18px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+/* 
+    Frase principal debajo del titulo.
+*/
+body > p:first-of-type{
+    color: #aaaaaa;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* 
+    Titulos de secciones.
+*/
 h2{
     text-align: center;
-    color: #FFD700;
-    margin-top: 30px;
+    color: #FFD21F;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 210, 31, 0.25);
 }
 
-/* Parrafos */
+/* 
+    Titulos pequeños dentro de tarjetas.
+*/
+h3{
+    text-align: center;
+    color: #FFD21F;
+    margin-bottom: 8px;
+}
+
+/* 
+    Parrafos generales.
+*/
 p{
     text-align: center;
+    line-height: 1.7;
+    padding: 0 20px;
+    color: #e0e0e0;
 }
 
-/* Menu */
+/* 
+    Linea divisoria entre secciones.
+*/
+hr{
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #4A9ADD, transparent);
+    margin: 30px 20px;
+}
+
+/* 
+    Cada section funciona como una tarjeta principal.
+*/
+section{
+    background-color: #111111;
+    margin: 20px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    border-left: 4px solid #4A9ADD;
+}
+
+/* 
+    Menu de navegacion.
+*/
+nav{
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* 
+    Enlaces del menu como botones.
+*/
 a{
+    display: block;
+    width: 85%;
+    margin: 8px auto;
+    padding: 12px;
+    text-align: center;
     color: white;
     text-decoration: none;
-    margin: 5px;
-}
-
-a:hover{
-    color: #FFD700;
-}
-
-/* Secciones (esto mejora TODO el diseño) */
-section{
-    background-color: #111;
-    margin: 20px;
-    padding: 15px;
+    background-color: #111111;
+    border: 1px solid #4A9ADD;
     border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.25s, color 0.25s, border-color 0.25s;
 }
 
-/* Imagen */
+/* 
+    Efecto al pasar el mouse sobre los enlaces.
+*/
+a:hover{
+    background-color: #FFD21F;
+    color: #050505;
+    border-color: #FFD21F;
+}
+
+/* 
+    Imagenes generales.
+*/
 img{
     display: block;
+    width: 90%;
+    max-width: 350px;
+    margin: 15px auto;
+    border-radius: 15px;
+    border: 2px solid #4A9ADD;
+    object-fit: cover;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+/* 
+    Efecto sobre imagenes.
+*/
+img:hover{
+    transform: scale(1.02);
+    border-color: #FFD21F;
+}
+
+/* 
+    Contenedor de galeria.
+*/
+.galeria{
+    width: 90%;
     margin: auto;
-    width: 300px;
+}
+
+/* 
+    Imagenes dentro de la galeria.
+*/
+.galeria img{
+    width: 100%;
+    max-width: 380px;
+    border-radius: 15px;
+    border: 2px solid #4A9ADD;
+}
+
+/* 
+    Listas.
+*/
+ul, ol{
+    width: 85%;
+    margin: auto;
+    padding-left: 25px;
+    line-height: 1.8;
+}
+
+/* 
+    Elementos de lista.
+*/
+li{
+    margin-bottom: 8px;
+    color: #e0e0e0;
+}
+
+/* 
+    Contenedor de la tabla.
+    Esto evita que la tabla se aplaste en celular.
+    Si no entra completa, se podra deslizar horizontalmente.
+*/
+.tabla-contenedor{
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
     border-radius: 10px;
 }
 
-/* Listas */
-ul, ol{
-    width: 60%;
-    margin: auto;
-}
-
-/* Tabla */
+/* 
+    Tabla general.
+    min-width evita que las columnas se hagan demasiado estrechas en celular.
+*/
 table{
+    width: 100%;
+    min-width: 600px;
     margin: auto;
     border-collapse: collapse;
-    width: 60%;
+    background-color: #111111;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
+/* 
+    Encabezados de tabla.
+*/
 th{
-    background-color: #FFD700;
-    color: black;
+    background-color: #FFD21F;
+    color: #050505;
+    letter-spacing: 0.5px;
+    font-size: 16px;
 }
 
+/* 
+    Celdas y encabezados.
+*/
 th, td{
-    padding: 10px;
-    border: 1px solid white;
+    padding: 14px;
+    border: 1px solid #2a2a2a;
     text-align: center;
+    transition: background-color 0.2s;
 }
 
-/* Video y audio */
-video, audio{
+/* 
+    Celdas normales.
+*/
+td{
+    color: #e0e0e0;
+    background-color: #050505;
+    font-size: 15px;
+}
+
+/* 
+    Efecto al pasar el mouse sobre una fila.
+*/
+tr:hover td{
+    background-color: #1a1a1a;
+}
+
+/* 
+    Video.
+*/
+video{
     display: block;
-    margin: auto;
+    width: 90%;
+    max-width: 380px;
+    margin: 15px auto;
+    border-radius: 12px;
+    border: 2px solid #4A9ADD;
 }
 
-/* Mapa */
+/* 
+    Mapa.
+*/
 iframe{
     display: block;
+    width: 90%;
+    max-width: 400px;
+    height: 250px;
     margin: auto;
-    border-radius: 10px;
+    border: 2px solid #4A9ADD;
+    border-radius: 15px;
 }
 
-/* Formulario */
+/* 
+    Formulario.
+*/
 form{
-    width: 300px;
+    width: 90%;
+    max-width: 420px;
     margin: auto;
+    background-color: #111111;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #FFD21F;
 }
 
-/* Inputs */
-input, textarea{
+/* 
+    Etiquetas del formulario.
+*/
+label{
+    font-weight: bold;
+    color: #FFD21F;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+/* 
+    Campos del formulario.
+*/
+input, textarea, select{
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background-color: #1a1a1a;
+    color: white;
+    transition: border-color 0.25s;
 }
 
-/* Boton */
+/* 
+    Efecto cuando se selecciona un campo.
+*/
+input:focus, textarea:focus, select:focus{
+    border: 2px solid #4A9ADD;
+    background-color: #222222;
+}
+
+/* 
+    Boton de enviar.
+*/
 input[type="submit"]{
-    background-color: #FFD700;
-    color: black;
+    background-color: #FFD21F;
+    color: #050505;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
     border: none;
+    letter-spacing: 0.5px;
+    transition: background-color 0.25s, color 0.25s, transform 0.15s;
 }
 
-/* Footer */
+/* 
+    Efecto del boton.
+*/
+input[type="submit"]:hover{
+    background-color: #4A9ADD;
+    color: white;
+    transform: scale(1.02);
+}
+
+/* 
+    Contenedor de beneficios.
+*/
+.beneficios-contenedor{
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 
+    Tarjetas de beneficios.
+*/
+.beneficio{
+    background-color: #0d0d0d;
+    border: 2px solid #4A9ADD;
+    border-radius: 15px;
+    padding: 20px 15px;
+    text-align: center;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+/* 
+    Efecto de tarjetas de beneficios.
+*/
+.beneficio:hover{
+    transform: translateY(-4px);
+    border-color: #FFD21F;
+}
+
+/* 
+    Titulos de beneficios.
+*/
+.beneficio h3{
+    color: #FFD21F;
+    margin-bottom: 10px;
+}
+
+/* 
+    Texto de beneficios.
+*/
+.beneficio p{
+    padding: 0 10px;
+}
+
+/* 
+    Contenedor de planes.
+*/
+.planes-contenedor{
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 
+    Tarjetas de planes.
+*/
+.plan{
+    background-color: #0d0d0d;
+    border: 2px solid #4A9ADD;
+    border-radius: 15px;
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+/* 
+    Efecto de tarjetas de planes.
+*/
+.plan:hover{
+    transform: translateY(-4px);
+    border-color: #FFD21F;
+}
+
+/* 
+    Plan destacado.
+*/
+.destacado{
+    border: 2px solid #FFD21F;
+    box-shadow: 0 0 20px rgba(255, 210, 31, 0.4);
+    position: relative;
+}
+
+/* 
+    Etiqueta recomendado.
+*/
+.destacado::before{
+    content: "RECOMENDADO";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFD21F;
+    color: #050505;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* 
+    Titulos de planes.
+*/
+.plan h3{
+    color: #FFD21F;
+}
+
+/* 
+    Precio de planes.
+*/
+.precio{
+    font-size: 32px;
+    font-weight: bold;
+    color: #4A9ADD;
+    margin: 10px 0;
+}
+
+/* 
+    Contenedor de horarios.
+*/
+.horarios-contenedor{
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 
+    Tarjetas de horarios.
+*/
+.horario{
+    background-color: #0d0d0d;
+    border: 2px solid #FFD21F;
+    border-radius: 15px;
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.25s;
+}
+
+/* 
+    Efecto de horarios.
+*/
+.horario:hover{
+    transform: translateY(-3px);
+}
+
+/* 
+    Titulos de horarios.
+*/
+.horario h3{
+    color: #4A9ADD;
+    margin-bottom: 10px;
+}
+
+/* 
+    Horas dentro de la tarjeta.
+*/
+.horario p{
+    background-color: #1a1a1a;
+    margin: 8px auto;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+    color: #e0e0e0;
+    transition: background-color 0.2s;
+}
+
+/* 
+    Efecto sobre cada hora.
+*/
+.horario p:hover{
+    background-color: #222222;
+}
+
+/* 
+    Footer.
+*/
 footer{
     text-align: center;
-    margin-top: 30px;
-    padding: 10px;
-    background-color: #111;
+    margin-top: 40px;
+    padding: 25px 20px;
+    background-color: #0d0d0d;
+    border-top: 3px solid #4A9ADD;
+}
+
+/* 
+    Parrafos del footer.
+*/
+footer p{
+    margin: 6px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+/* 
+    Estilos para tablets y computadoras.
+*/
+@media screen and (min-width: 700px){
+
+    /* 
+        Titulo mas grande.
+    */
+    h1{
+        font-size: 68px;
+        letter-spacing: 10px;
+    }
+
+    /* 
+        Menu horizontal.
+    */
+    a{
+        display: inline-block;
+        width: auto;
+        margin: 5px;
+        padding: 10px 20px;
+    }
+
+    /* 
+        Secciones centradas.
+    */
+    section{
+        max-width: 1000px;
+        margin: 25px auto;
+        padding: 30px;
+    }
+
+    /* 
+        Galeria en dos columnas.
+    */
+    .galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 900px;
+    }
+
+    /* 
+        Imagenes de galeria.
+    */
+    .galeria img{
+        max-width: 100%;
+    }
+
+    /* 
+        Beneficios en dos columnas.
+    */
+    .beneficios-contenedor{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* 
+        Planes en dos columnas.
+    */
+    .planes-contenedor{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* 
+        Horarios en dos columnas.
+    */
+    .horarios-contenedor{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* 
+        Listas mas angostas.
+    */
+    ul, ol{
+        width: 60%;
+    }
+
+    /* 
+        En pantallas grandes la tabla ya no necesita scroll forzado.
+    */
+    table{
+        width: 80%;
+        min-width: 0;
+    }
+
+    /* 
+        Video mas grande.
+    */
+    video{
+        max-width: 560px;
+    }
+
+    /* 
+        Formulario mas ancho.
+    */
+    form{
+        max-width: 500px;
+    }
+
+    /* 
+        Precio mas grande.
+    */
+    .precio{
+        font-size: 36px;
+    }
 }

@@ -1,189 +1,385 @@
 <!DOCTYPE html>
+<html lang="es"> <!-- Indica que el idioma principal de la página es español -->
+
 <head>
-    
-    <title> Mashka Box</title> 
+    <!-- Permite usar caracteres especiales como tildes y la letra ñ -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que la página se adapte al tamaño de la pantalla del dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nombre que aparece en la pestaña del navegador -->
+    <title>Mashka Box</title>
+
+    <!-- Conecta este archivo HTML con el archivo de estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <h1>MASHKA BOX</h1>
-    <h2>Training Club</h2>
+    <!-- id permite que el enlace del menú pueda regresar a esta parte de la página -->
+    <h1 id="inicio">MASHKA</h1>
+    <h2>TRAINING CLUB</h2>
     <p>Transforma tu cuerpo, eleva tu mente.</p>
 
     <h2>Menu de navegacion</h2>
-    <a href="#inicio">Inicio</a><br>
-    <a href="#nosotros">Sobre nosotros</a><br>
-    <a href="#beneficios">Beneficios</a><br>
-    <a href="#planes">Planes</a><br>
-    <a href="#horarios">Horarios</a><br>
-    <a href="#multimedia">Multimedia</a><br>
-    <a href="#ubicacion">Ubicacion</a><br>
-    <a href="#contacto">Contacto</a><br>
+
+    <!-- nav agrupa los enlaces principales de navegación -->
+    <nav>
+        <!-- href con # lleva a una sección dentro de la misma página -->
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Sobre nosotros</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#planes">Planes</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#ubicacion">Ubicacion</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Línea horizontal para separar visualmente las secciones -->
+    <hr>
+
+    <!-- section se usa para dividir el contenido por temas -->
+    <section>
+        <h2>Bienvenida</h2>
+        <p>
+            Bienvenido a Mashka Box, un espacio creado para ayudarte a alcanzar tus
+            objetivos de salud, bienestar y entrenamiento fisico.
+        </p>
+        <p>
+            Aqui encontraras energia, disciplina, constancia y una comunidad lista
+            para acompañarte en cada entrenamiento.
+        </p>
+    </section>
 
     <hr>
 
-    <h2>Bienvenida</h2>
-    <p>
-        Bienvenido a Mashka Box, un espacio creado para ayudarte a alcanzar tus
-        objetivos de salud, bienestar y entrenamiento fisico.
-    </p>
+    <section>
+        <!-- id conecta esta sección con el enlace "Sobre nosotros" del menú -->
+        <h2 id="nosotros">Sobre nosotros</h2>
+        <p>
+            En Mashka Box nos dedicamos a ayudar a mujeres jovenes y a toda persona
+            interesada en mejorar su condicion fisica a traves de programas de
+            entrenamiento, clases grupales y asesoramiento.
+        </p>
+
+        <p>
+            Contamos con un ambiente moderno, motivador y una comunidad enfocada en
+            crecer, mejorar y mantener un estilo de vida saludable.
+        </p>
+    </section>
 
     <hr>
 
-    <h2 id="nosotros">Sobre nosotros</h2>
-    <p>
-        En Mashka Box nos dedicamos a ayudar a mujeres jovenes y a toda persona
-        interesada en mejorar su condicion fisica a traves de programas de
-        entrenamiento, clases grupales y asesoramiento.
-    </p>
-    <p>
-        Contamos con un ambiente moderno, motivador y una comunidad enfocada en
-        crecer, mejorar y mantener un estilo de vida saludable.
-    </p>
+    <section>
+        <h2 id="galeria">Galeria de imagenes</h2>
+        <p>
+            Conoce un poco del ambiente, los entrenamientos y la comunidad de Mashka Box.
+        </p>
+
+        <!-- class sirve para aplicar estilos desde CSS a este grupo de imágenes -->
+        <div class="galeria">
+
+            <!-- src indica la ubicación de la imagen y alt describe la imagen si no carga -->
+            <img src="Imagenes/logo.jpeg" alt="Logo de Mashka Box">
+
+            <img src="Imagenes/entrenamiento1.jpeg" alt="Entrenamiento funcional en Mashka Box">
+            <img src="Imagenes/entrenamiento2.jpeg" alt="Clase grupal de crossfit">
+            <img src="Imagenes/entrenamiento3.jpeg" alt="Comunidad Mashka Box">
+        </div>
+    </section>
 
     <hr>
 
-    <h2>Imagen principal</h2>
-    <img src="Imagenes/logo.jpeg" alt="Imagen principal de Mashka Box" width="300">
-    <hr>
+    <section>
+        <h2 id="beneficios">Beneficios</h2>
+        <p>
+            Entrena en un ambiente motivador, acompañado por una comunidad que te impulsa
+            a dar lo mejor de ti en cada clase.
+        </p>
 
-    <h2 id="beneficios">Beneficios</h2>
-    <ul>
-        <li>Ejercicios adaptados a tu nivel</li>
-        <li>Apto para todas las edades</li>
-        <li>Te acompanamos paso a paso</li>
-        <li>La mejor comunidad en Latacunga</li>
-        <li>Crossfit y entrenamiento funcional</li>
-    </ul>
+        <!-- Contenedor general para organizar las tarjetas de beneficios -->
+        <div class="beneficios-contenedor">
 
-    <hr>
+            <!-- Cada div con clase beneficio representa una tarjeta individual -->
+            <div class="beneficio">
+                <h3>Entrenamiento funcional</h3>
+                <p>Rutinas completas para mejorar fuerza, resistencia y movilidad.</p>
+            </div>
 
-    <h2 id="planes">Planes</h2>
-    <p>Conoce los planes disponibles en Mashka Box:</p>
+            <div class="beneficio">
+                <h3>Clases grupales</h3>
+                <p>Entrena con más personas y mantente motivado todos los días.</p>
+            </div>
 
-    <ol>
-        <li>Plan grupal: $30 por persona desde 3 personas</li>
-        <li>Plan estudiantes: $30 con carnet vigente</li>
-        <li>Plan mensual: $35</li>
-        <li>Plan trimestral: $95</li>
-        <li>Plan semestral: $180</li>
-    </ol>
+            <div class="beneficio">
+                <h3>Acompañamiento</h3>
+                <p>Te guiamos paso a paso según tu nivel y tus objetivos.</p>
+            </div>
 
-    <hr>
+            <div class="beneficio">
+                <h3>Comunidad Mashka</h3>
+                <p>Más que un box, somos una comunidad con energía y disciplina.</p>
+            </div>
 
-    <h2>Tabla informativa de planes</h2>
-    <table border="1">
-        <tr>
-            <th>Plan</th>
-            <th>Precio</th>
-            <th>Detalle</th>
-        </tr>
-        <tr>
-            <td>Grupal</td>
-            <td>$30</td>
-            <td>Desde 3 personas</td>
-        </tr>
-        <tr>
-            <td>Estudiantes</td>
-            <td>$30</td>
-            <td>Con carnet vigente</td>
-        </tr>
-        <tr>
-            <td>Mensual</td>
-            <td>$35</td>
-            <td>Intenta un mes</td>
-        </tr>
-        <tr>
-            <td>Trimestral</td>
-            <td>$95</td>
-            <td>Comprometete 90 dias</td>
-        </tr>
-        <tr>
-            <td>Semestral</td>
-            <td>$180</td>
-            <td>Convierte tu vida</td>
-        </tr>
-    </table>
+        </div>
+    </section>
 
     <hr>
 
-    <h2 id="horarios">Horarios de atencion</h2>
-    <p><b>Horarios manana:</b></p>
-    <ul>
-        <li>5:00 AM</li>
-        <li>6:00 AM</li>
-        <li>7:00 AM</li>
-        <li>8:00 AM</li>
-    </ul>
+    <section>
+        <h2 id="planes">Planes</h2>
+        <p>Elige el plan que mejor se adapte a tu ritmo de entrenamiento.</p>
 
-    <p><b>Horarios tarde/noche:</b></p>
-    <ul>
-        <li>16:00 PM</li>
-        <li>17:00 PM</li>
-        <li>18:00 PM</li>
-        <li>19:00 PM</li>
-        <li>20:00 PM</li>
-    </ul>
+        <!-- Agrupa todos los planes para acomodarlos mejor con CSS -->
+        <div class="planes-contenedor">
 
-    <hr>
+            <div class="plan">
+                <h3>Plan Grupal</h3>
 
-    <h2 id="multimedia">Seccion multimedia</h2>
-    <p>Video de entrenamiento:</p>
-    <video width="320" height="240" controls>
-        <source src="Video/entrenamiento.mp4" type="video/mp4">
-        Tu navegador no soporta video.
-    </video>
+                <!-- La clase precio permite darle un estilo especial al valor del plan -->
+                <p class="precio">$30</p>
+                <p>Por persona desde 3 personas.</p>
+            </div>
 
-    <p>Audio motivacional:</p>
-    <audio controls>
-        <source src="audio/motivacion.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-    </audio>
+            <div class="plan">
+                <h3>Plan Estudiantes</h3>
+                <p class="precio">$30</p>
+                <p>Presentando carnet estudiantil vigente.</p>
+            </div>
 
-    <hr>
+            <!-- destacado se usa para resaltar este plan frente a los demás -->
+            <div class="plan destacado">
+                <h3>Plan Mensual</h3>
+                <p class="precio">$35</p>
+                <p>Ideal para empezar y probar tu primer mes.</p>
+            </div>
 
-    <h2 id="ubicacion">Ubicacion</h2>
-    <p>Encuentranos en Latacunga.</p>
-    <iframe 
-        src="https://www.google.com/maps"
-        width="400" 
-        height="250">
-    </iframe>
+            <div class="plan">
+                <h3>Plan Trimestral</h3>
+                <p class="precio">$95</p>
+                <p>Comprométete 90 días con tu cambio.</p>
+            </div>
 
-    <hr>
+            <div class="plan">
+                <h3>Plan Semestral</h3>
+                <p class="precio">$180</p>
+                <p>Convierte el entrenamiento en un hábito.</p>
+            </div>
 
-    <h2 id="contacto">Formulario de contacto</h2>
-    <form>
-        <label>Nombre:</label><br>
-        <input type="text" name="nombre"><br><br>
-
-        <label>Correo electronico:</label><br>
-        <input type="email" name="correo"><br><br>
-
-        <label>Telefono:</label><br>
-        <input type="text" name="telefono"><br><br>
-
-        <label>Mensaje:</label><br>
-        <textarea name="mensaje" rows="5" cols="30"></textarea><br><br>
-
-        <input type="submit" value="Enviar">
-    </form>
+        </div>
+    </section>
 
     <hr>
 
-    <h2>Contacto y redes sociales</h2>
-    <p>Direccion: Av. Unidad Nacional y Manuelita Saenz</p>
-    <p>Telefono: 0983421877</p>
-    <p>Instagram: @mashkabox</p>
-    <p>Facebook: Mashka Box</p>
-    <p>TikTok: Mashka Box</p>
+    <section>
+        <h2>Comparacion de planes</h2>
+        <p>Elige el plan que mejor se adapte a tu ritmo y objetivo.</p>
+
+        <!-- Contenedor usado para dar formato a la tabla desde CSS -->
+        <div class="tabla-contenedor">
+
+            <!-- table crea una tabla de información -->
+            <table>
+
+                <!-- tr representa una fila de la tabla -->
+                <tr>
+                    <!-- th se usa para los encabezados de las columnas -->
+                    <th>Plan</th>
+                    <th>Ideal para</th>
+                    <th>Beneficio</th>
+                </tr>
+
+                <tr>
+                    <!-- td representa una celda normal dentro de la tabla -->
+                    <td>Grupal</td>
+                    <td>Entrenar con amigos</td>
+                    <td>Motivacion en equipo</td>
+                </tr>
+
+                <tr>
+                    <td>Estudiantes</td>
+                    <td>Jovenes con carnet</td>
+                    <td>Precio accesible</td>
+                </tr>
+
+                <tr>
+                    <td>Mensual</td>
+                    <td>Personas que empiezan</td>
+                    <td>Probar 1 mes</td>
+                </tr>
+
+                <tr>
+                    <td>Trimestral</td>
+                    <td>Buscar constancia</td>
+                    <td>Disciplina 90 dias</td>
+                </tr>
+
+                <tr>
+                    <td>Semestral</td>
+                    <td>Cambio a largo plazo</td>
+                    <td>Crear habito</td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
     <hr>
 
+    <section>
+        <h2 id="horarios">Horarios de atencion</h2>
+        <p>Tenemos horarios flexibles para que puedas entrenar antes o después de tus actividades.</p>
+
+        <!-- Contenedor para separar los horarios en bloques -->
+        <div class="horarios-contenedor">
+
+            <div class="horario">
+                <h3>Horarios Mañana</h3>
+                <p>5:00 AM</p>
+                <p>6:00 AM</p>
+                <p>7:00 AM</p>
+                <p>8:00 AM</p>
+            </div>
+
+            <div class="horario">
+                <h3>Horarios Tarde / Noche</h3>
+                <p>4:00 PM</p>
+                <p>5:00 PM</p>
+                <p>6:00 PM</p>
+                <p>7:00 PM</p>
+                <p>8:00 PM</p>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2 id="multimedia">Seccion multimedia</h2>
+
+        <p>Video de entrenamiento:</p>
+
+        <!-- controls muestra los botones para reproducir, pausar y controlar el video -->
+        <video width="320" height="240" controls>
+
+            <!-- source indica la ruta del video y type el formato del archivo -->
+            <source src="Video/entrenamiento.mp4" type="video/mp4">
+
+            Tu navegador no soporta video.
+        </video>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2 id="ubicacion">Ubicacion</h2>
+        <p>Encuentranos en Mashka Box Training Club, Latacunga.</p>
+
+        <!-- iframe permite insertar contenido externo, en este caso un mapa de Google Maps -->
+        <iframe 
+            src="https://www.google.com/maps?q=-0.9452842,-78.6113165&z=17&output=embed"
+            width="400"
+            height="250"
+            loading="lazy">
+        </iframe>
+
+        <p>
+            <!-- target="_blank" abre el enlace en una nueva pestaña -->
+            <a href="https://maps.app.goo.gl/JB6sSnckx5pYGWyc8" target="_blank">
+                Ver ubicacion en Google Maps
+            </a>
+        </p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2 id="contacto">Empieza tu cambio hoy</h2>
+
+        <p>
+            Dejanos tus datos y nos comunicaremos contigo para ayudarte a elegir
+            el plan que mejor se adapte a tus objetivos.
+        </p>
+
+        <!-- form agrupa los campos que el usuario debe llenar -->
+        <form>
+
+            <!-- label sirve para indicar qué información debe ingresar el usuario -->
+            <label>Nombre completo:</label><br>
+
+            <!-- input type text permite escribir texto normal -->
+            <!-- name identifica este campo y placeholder muestra una guía dentro del cuadro -->
+            <input type="text" name="nombre" placeholder="Escribe tu nombre completo"><br><br>
+
+            <label>Correo electronico:</label><br>
+
+            <!-- type email está pensado para ingresar correos electrónicos -->
+            <input type="email" name="correo" placeholder="ejemplo@gmail.com"><br><br>
+
+            <label>Telefono:</label><br>
+            <input type="text" name="telefono" placeholder="Tu numero de contacto"><br><br>
+
+            <label>Objetivo principal:</label><br>
+
+            <!-- select crea una lista desplegable de opciones -->
+            <select name="objetivo">
+
+                <!-- option representa cada opción disponible dentro del select -->
+                <option>Selecciona una opcion</option>
+                <option>Bajar de peso</option>
+                <option>Ganar fuerza</option>
+                <option>Mejorar mi condicion fisica</option>
+                <option>Empezar desde cero</option>
+                <option>Entrenar por salud</option>
+            </select><br><br>
+
+            <label>Horario de interes:</label><br>
+            <select name="horario">
+                <option>Selecciona un horario</option>
+                <option>Manana</option>
+                <option>Tarde</option>
+                <option>Noche</option>
+            </select><br><br>
+
+            <label>Plan que te interesa:</label><br>
+            <select name="plan">
+                <option>Selecciona un plan</option>
+                <option>Plan grupal</option>
+                <option>Plan estudiantes</option>
+                <option>Plan mensual</option>
+                <option>Plan trimestral</option>
+                <option>Plan semestral</option>
+            </select><br><br>
+
+            <!-- type submit crea el botón para enviar el formulario -->
+            <input type="submit" value="Quiero empezar">
+        </form>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Contacto y redes sociales</h2>
+
+        <p>Direccion: Av. Unidad Nacional y Manuelita Saenz</p>
+        <p>Telefono: 0983421877</p>
+        <p>Instagram: @mashkabox</p>
+        <p>Facebook: Mashka Box</p>
+    </section>
+
+    <hr>
+
+    <!-- footer contiene la parte final de la página -->
     <footer>
         <p>Mas que un box, una comunidad.</p>
+
+        <!-- &copy; muestra el símbolo de derechos de autor -->
         <p>&copy; 2026 Mashka Box Training Club</p>
     </footer>
 
 </body>
+
 </html>
