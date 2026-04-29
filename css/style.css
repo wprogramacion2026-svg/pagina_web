@@ -228,7 +228,7 @@ li{
 
 /* 
     Tabla general.
-    min-width evita que las columnas se hagan demasiado estrechas en celular.
+    min-width evita que las columnas se hagan demasiado estrechas.
 */
 table{
     width: 100%;
@@ -564,111 +564,4 @@ footer p{
     margin: 6px;
     font-size: 14px;
     color: #aaaaaa;
-}
-
-/* 
-    Estilos para tablets y computadoras.
-*/
-@media screen and (min-width: 700px){
-
-    /* 
-        Titulo mas grande.
-    */
-    h1{
-        font-size: 68px;
-        letter-spacing: 10px;
-    }
-
-    /* 
-        Menu horizontal.
-    */
-    a{
-        display: inline-block;
-        width: auto;
-        margin: 5px;
-        padding: 10px 20px;
-    }
-
-    /* 
-        Secciones centradas.
-    */
-    section{
-        max-width: 1000px;
-        margin: 25px auto;
-        padding: 30px;
-    }
-
-    /* 
-        Galeria en dos columnas.
-    */
-    .galeria{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        max-width: 900px;
-    }
-
-    /* 
-        Imagenes de galeria.
-    */
-    .galeria img{
-        max-width: 100%;
-    }
-
-    /* 
-        Beneficios en dos columnas.
-    */
-    .beneficios-contenedor{
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* 
-        Planes en dos columnas.
-    */
-    .planes-contenedor{
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* 
-        Horarios en dos columnas.
-    */
-    .horarios-contenedor{
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* 
-        Listas mas angostas.
-    */
-    ul, ol{
-        width: 60%;
-    }
-
-    /* 
-        En pantallas grandes la tabla ya no necesita scroll forzado.
-    */
-    table{
-        width: 80%;
-        min-width: 0;
-    }
-
-    /* 
-        Video mas grande.
-    */
-    video{
-        max-width: 560px;
-    }
-
-    /* 
-        Formulario mas ancho.
-    */
-    form{
-        max-width: 500px;
-    }
-
-    /* 
-        Precio mas grande.
-    */
-    .precio{
-        font-size: 36px;
-    }
 }
